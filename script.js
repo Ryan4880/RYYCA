@@ -39,37 +39,6 @@ function escapeHTML(value) {
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[char]));
 }
-// Criando o áudio
-const musica = new Audio("musica.mp3");
-
-// Ativando o loop
-musica.loop = true;
-
-// Criando o áudio
-const musica = new Audio("musica.mp3");
-
-// Ativando o loop
-musica.loop = true;
-
-// Selecionando o botão
-const botao = document.getElementById("botaoMusica");
-
-// Evento de clique
-botao.addEventListener("click", function() {
-
-    if (musica.paused) {
-
-        musica.play();
-
-        botao.textContent = "⏸ Pausar música";
-
-    } else {
-
-        musica.pause();
-
-        botao.textContent = "▶ Tocar música";
-
-    }
 
 });
 
