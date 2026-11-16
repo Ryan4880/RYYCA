@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171321">
+  <meta name="description" content="Um pequeno projeto, feito com muito carinho.">
+  <title>Declaração - Ryca — ♥</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Love Project início">
+      <span class="brand-mark">♥</span>
+      <span>love<span class="brand-muted">.project</span></span>
+      <span class="private-tag">PRIVATE REPO</span>
+    </a>
+    <div class="top-meta">
+      <span class="status-dot"></span>
+      <span>todos os sistemas funcionando perfeitamente</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Feito com amor.</p>
+        <h1>Olá, <span id="herName">minha dev favorita</span><span class="pink">.</span></h1>
+        <p class="hero-subtitle">Preparei um pequeno projeto para a pessoa que faz meu coração funcionar melhor que qualquer código.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="runProject">▶ executar surpresa</button>
+          <button class="btn btn-ghost" data-command="help">ver comandos <span>↗</span></button>
+        </div>
+        <div class="hero-footnote"><span class="tiny-lock">⌑</span>Feito com carinho.</div>
+      </div>
+
+      <div class="code-window" aria-label="Prévia de código">
+        <div class="window-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>src / feelings.js</span>
+          <span class="window-lang">JS</span>
+        </div>
+        <pre class="code"><span class="code-purple">const</span> <span class="code-blue">você</span> = {
+  type: <span class="code-green">"um de cada tipo"</span>,
+  smile: <span class="code-green">"minha favorita"</span>,
+  bugs: <span class="code-orange">0</span>,
+  importance: <span class="code-green">"infinito"</span>
+};
+
+<span class="code-purple">function</span> <span class="code-yellow">myFavoritePerson</span>() {
+  <span class="code-purple">return</span> <span class="code-pink">você</span>;
+}
+
+<span class="code-comment">// Nenhum framework consegue explicar isso.</span>
+<span class="code-purple">while</span> (<span class="code-blue">true</span>) {
+  <span class="code-blue">love</span>(você);
+}</pre>
+        <div class="window-footer"><span>UTF-8</span><span>♥ made with love</span><span>Ln 14, Col 1</span></div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL DASHBOARD</p>
+          <h2>Explore the project<span class="pink">.</span></h2>
+        </div>
+        <span class="version-pill">v1.0.0 · stable</span>
+      </div>
+
+      <div class="feature-grid">
+        <button class="feature-card" data-command="letter">
+          <span class="feature-icon icon-pink">♡</span>
+          <span class="feature-title">README do nosso amor</span>
+          <span class="feature-desc">Documentação oficial do que sinto por você.</span>
+          <span class="feature-link">abrir arquivo <b>↗</b></span>
+        </button>
+        <button class="feature-card" data-command="bug">
+          <span class="feature-icon icon-orange">⌁</span>
+          <span class="feature-title">Bug report</span>
+          <span class="feature-desc">Um erro crítico foi encontrado no sistema.</span>
+          <span class="feature-link">investigar bug <b>↗</b></span>
+        </button>
+        <button class="feature-card" data-command="reasons">
+          <span class="feature-icon icon-purple">✳</span>
+          <span class="feature-title">Banco de motivos</span>
+          <span class="feature-desc">Consultas ilimitadas sobre por que amo você.</span>
+          <span class="feature-link">executar query <b>↗</b></span>
+        </button>
+        <button class="feature-card" data-command="memories">
+          <span class="feature-icon icon-blue">▧</span>
+          <span class="feature-title">Memórias versionadas</span>
+          <span class="feature-desc">Alguns commits que quero guardar para sempre.</span>
+          <span class="feature-link">ver histórico <b>↗</b></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="terminal-section" id="terminalSection">
+      <div class="terminal-heading">
+        <div>
+          <p class="eyebrow">INTERACTIVE SHELL</p>
+          <h2>Terminal do carinho<span class="pink">.</span></h2>
+        </div>
+        <span class="terminal-hint">try: <code>help</code></span>
+      </div>
+      <div class="terminal">
+        <div class="terminal-top">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>love-terminal — zsh</span>
+          <button id="clearTerminal" title="Limpar terminal" aria-label="Limpar terminal">⌫</button>
+        </div>
+        <div class="terminal-output" id="terminalOutput" aria-live="polite">
+          <div class="output-muted">LoveOS [versão 1.0.0]</div>
+          <div class="output-muted">Um terminal especial. Digite <span class="terminal-pink">help</span> para conhecer os comandos.</div>
+          <div class="output-line"><span class="prompt">guest@love-project ~ %</span> <span class="typed">hello</span></div>
+          <div class="output-success">Olá, pessoa mais especial deste repositório. ♥</div>
+        </div>
+        <form class="terminal-input-row" id="terminalForm" autocomplete="off">
+          <label for="commandInput"><span class="prompt">guest@love-project ~ %</span></label>
+          <input id="commandInput" type="text" placeholder="digite um comando..." spellcheck="false" aria-label="Digite um comando">
+          <button type="submit" aria-label="Executar comando">↵</button>
+        </form>
+      </div>
+      <p class="terminal-note">Dica: tente <code>help</code>, <code>love</code>, <code>bug</code>, <code>date</code> ou <code>secret</code>.</p>
+    </section>
+
+    <section class="deploy-card">
+      <div class="deploy-icon">✦</div>
+      <div class="deploy-copy">
+        <p class="eyebrow">FINAL BUILD</p>
+        <h2>Pronta para a implantação?</h2>
+        <p>Tem uma última mensagem esperando por você. Só precisa colocar esse projeto no ar. 💗</p>
+      </div>
+      <button class="btn btn-primary" id="deployButton">fazer deploy <span>↗</span></button>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Ryca.project</span>
+      <span>0% bugs · 100% carinho <b>♥</b></span>
+      <span>built for one user only</span>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+      <div class="modal-symbol" id="modalSymbol">♡</div>
+      <p class="eyebrow" id="modalEyebrow">A MESSAGE FOR YOU</p>
+      <h2 id="modalTitle">README.md</h2>
+      <div class="modal-content" id="modalContent"></div>
+      <button class="btn btn-primary modal-ok" id="modalOk">entendi, meu bem ♥</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
