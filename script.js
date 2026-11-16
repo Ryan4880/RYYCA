@@ -24,6 +24,31 @@ const CONFIG = {
     { titulo: "Nossa melhor feature", texto: "Todos, principalmente quando estamos assistindo algo e eu fico reparando em você." }
   ]
 };
+// Criando o áudio
+const musica = new Audio("musica.mp3");
+
+// Ativando o loop
+musica.loop = true;
+
+// Selecionando o botão
+const botao = document.getElementById("botaoMusica");
+
+// Evento de clique
+botao.addEventListener("click", function() {
+
+    if (musica.paused) {
+
+        musica.play();
+
+        botao.textContent = "⏸ Pausar música";
+
+    } else {
+
+        musica.pause();
+
+        botao.textContent = "▶ Tocar música";
+
+    }
 
 });
 
@@ -41,7 +66,6 @@ function escapeHTML(value) {
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[char]));
 }
-
 function appendTerminal(command, html, type = "body") {
   const line = document.createElement("div");
   line.className = "output-line";
@@ -52,7 +76,6 @@ function appendTerminal(command, html, type = "body") {
   output.append(line, result);
   output.scrollTop = output.scrollHeight;
 }
-
 function showToast(message) {
   const toast = $("#toast");
   toast.textContent = message;
@@ -60,7 +83,6 @@ function showToast(message) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
 }
-
 function openModal({ symbol = "♡", eyebrow = "A MESSAGE FOR YOU", title, content }) {
   $("#modalSymbol").textContent = symbol;
   $("#modalEyebrow").textContent = eyebrow;
@@ -70,7 +92,6 @@ function openModal({ symbol = "♡", eyebrow = "A MESSAGE FOR YOU", title, conte
   $("#closeModal").focus();
 }
 function closeModal() { modal.hidden = true; }
-
 $("#closeModal").addEventListener("click", closeModal);
 $("#modalOk").addEventListener("click", closeModal);
 modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
