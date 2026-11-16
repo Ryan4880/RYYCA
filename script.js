@@ -25,7 +25,6 @@ const CONFIG = {
   ]
 };
 
-
 // Criando o áudio
 const musica = new Audio("musica.mp3");
 
@@ -68,10 +67,6 @@ function escapeHTML(value) {
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[char]));
 }
-
-});
-
-});
 
 function appendTerminal(command, html, type = "body") {
   const line = document.createElement("div");
