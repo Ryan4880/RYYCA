@@ -45,6 +45,12 @@ const musica = new Audio("musica.mp3");
 // Ativando o loop
 musica.loop = true;
 
+// Criando o áudio
+const musica = new Audio("musica.mp3");
+
+// Ativando o loop
+musica.loop = true;
+
 // Selecionando o botão
 const botao = document.getElementById("botaoMusica");
 
@@ -64,6 +70,8 @@ botao.addEventListener("click", function() {
         botao.textContent = "▶ Tocar música";
 
     }
+
+});
 
 });
 
